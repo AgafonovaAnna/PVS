@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+#BSUB -J MyMPIJob
+#BSUB -W 00:20
+#BSUB -n 2
+#BSUB -R "span[ptile=1]"
+#BSUB -oo output_2.out
+#BSUB -eo error_2.err
+module load mpi/openmpi-x86_64
+mpirun -np 2 ./parallel_program 500 500 100
