@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#BSUB -J MyJob
+#BSUB -P MyProject
+#BSUB -W 00:20
+#BSUB -n 2
+#BSUB -oo output_posled.log
+#BSUB -eo error_posled.log
+
+./posled_program 500 500 100
